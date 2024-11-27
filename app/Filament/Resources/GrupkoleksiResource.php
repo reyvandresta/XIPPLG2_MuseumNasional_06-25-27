@@ -42,11 +42,17 @@ class GrupkoleksiResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('nama')->label('koleksi'),
-                Tables\Columns\TextColumn::make('grup')
+                Tables\Columns\TextColumn::make('nama')->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('grup')->searchable()->sortable()
             ])
             ->filters([
-                //
+                Tables\Filters\SelectFilter::make('grup')
+                ->options([
+                    'Artefak' => 'Artefak',
+                    'seni' => 'seni',
+                    'pusaka' => 'pusaka',
+                    'sejarah' => 'sejarah',
+                ]),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),

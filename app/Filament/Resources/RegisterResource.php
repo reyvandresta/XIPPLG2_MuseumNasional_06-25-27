@@ -45,8 +45,8 @@ class RegisterResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('email')->label('email'),
-                Tables\Columns\TextColumn::make('password'),
+                Tables\Columns\TextColumn::make('email')->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('password')->searchable()->sortable()
             ])
             ->filters([
                 //

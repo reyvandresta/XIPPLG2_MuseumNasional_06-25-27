@@ -28,16 +28,16 @@ class FeedbackkkResource extends Resource
                     ->label('dia')
                     ->required(),
                     Forms\Components\TextInput::make('email')
-                    ->label('Email') // Label untuk input
-                    ->email() // Validasi agar input sesuai format email
-                    ->required(), // Menjadikan input wajib diisi
+                    ->label('Email')
+                    ->email()
+                    ->required(),
                 Forms\Components\TextInput::make('saran')
                     ->label('masukan')
                     ->required(),
                 Forms\Components\TextInput::make('rating')
                     ->label('penilaian')
-                    ->numeric() // Hanya mengizinkan angka
-                    ->required(), // Menjadikan input wajib diisi
+                    ->numeric()
+                    ->required(),
             ]);
     }
 
@@ -45,10 +45,10 @@ class FeedbackkkResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('nama')->label('dia'),
-                Tables\Columns\TextColumn::make('email'),
-                Tables\Columns\TextColumn::make('saran'),
-                Tables\Columns\TextColumn::make('rating')
+                Tables\Columns\TextColumn::make('nama')->label('dia')->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('email')->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('saran')->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('rating')->searchable()->sortable()
             ])
             ->filters([
                 //

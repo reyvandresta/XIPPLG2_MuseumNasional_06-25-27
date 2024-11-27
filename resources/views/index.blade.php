@@ -84,7 +84,7 @@
     </div>
 </div>
 
-<section class="bg-gray-50 min-h-screen py-12" id="Collection">
+<section class="bg-gray-50 min-h-screen top-[1000px]" id="Collection">
     <div class="container mx-auto">
         <div class="left-[100px] mb-12">
             <h2 class="text-4xl font-semibold">Collection</h2>
@@ -138,8 +138,42 @@
 </section>
 
 <section id="History" class="py-16 bg-gray-100">
-    <div class="container mx-auto px-4">
-        <h1 class="text-4xl font-bold text-center mb-8">History Museum Nasional Indonesia</h1>
-        <div class="grid md:grid-cols-2 gap-8">
-            <div>
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold text-center mb-8">History Museum Nasional Indonesia</h1>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <p class="text-lg leading-relaxed">
+                    Eksistensi Museum Nasional diawali dengan berdirinya suatu himpunan yang bernama Bataviaasch Genootschap van Kunsten en Wetenschappen, didirikan oleh Pemerintah Belanda pada tanggal 24 April 1778. Pada masa itu di Eropa tengah terjadi revolusi intelektual (the Age of Enlightenment) yaitu dimana orang mulai mengembangkan pemikiran-pemikiran ilmiah dan ilmu pengetahuan. Pada tahun 1752 di Haarlem, Belanda berdiri De Hollandsche Maatschappij der Wetenschappen (Perkumpulan Ilmiah Belanda). Hal ini mendorong orang-orang Belanda di Batavia (Indonesia) untuk mendirikan organisasi sejenis.
+                    Bataviaasch Genootschap van Kunsten en Wetenschappen (BG) merupakan lembaga independen yang didirikan untuk tujuan memajukan penetitian dalam bidang seni dan ilmu pengetahuan khususnya dalam bidang-bidang ilmu biologi, fisika, arkeologi, kesusastraan, etnologi dan sejarah, Berta menerbitkan hash penelitian. Lembaga ini mempunyai semboyan “Ten Nutte van het Algemeen” (Untuk Kepentingan Masyarakat Umum).
+                    </p>
+                </div>
+                <div class="text-center">
+                    <img src="/Assets/History.png" alt="Sejarah Museum" class="w-full h-auto rounded-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<footer class="bg-gray-800 py-4 text-white py-6 mt-10">
+        <div class="flex justify-between items-center mx-16">
+            <div class="flex items-center">
+                <img src="/Assets/tutwuri.png" alt="" class="w-24 h-auto">
+                <img src="/Assets/logo m.png" alt="" class="w-24 h-auto">
+            </div>
+            <div class="text-left">
+                <p class="mb-2 font-semibold">Tentang Kami</p>
+                <p>Badan Layanan Umum Museum Nasional Indonesia Jl. Medan Merdeka Barat No.12, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta, Indonesia<br> Telepon: +62 21 3868172</p>
+            </div>
+            <div class="text-center space-y-2">
+                <h2 class="text-blue-500 underline cursor-pointer hover:text-darkblue">Instagram</h2>
+                <h2 class="text-blue-500 underline cursor-pointer hover:text-darkblue">Facebook</h2>
+                <h2 class="text-blue-500 underline cursor-pointer hover:text-darkblue">Twitter</h2>
+            </div>
+        </div>
+    </footer>
+        </div>
+        </body>
+        
+
                

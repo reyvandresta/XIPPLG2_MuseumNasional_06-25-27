@@ -37,9 +37,9 @@ class KoleksiResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('title')->label('Judul'),
-                Tables\Columns\TextColumn::make('content'),
-                Tables\Columns\ImageColumn::make('picture')
+                Tables\Columns\TextColumn::make('title')->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('content')->searchable()->sortable(),
+                Tables\Columns\ImageColumn::make('picture')->searchable()->sortable()
             ])
             ->filters([])
             ->actions([
