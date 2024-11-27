@@ -84,7 +84,11 @@
     </div>
 </div>
 
+<<<<<<< HEAD
 <section class="bg-gray-50 min-h-screen top-[1000px]" id="Collection">
+=======
+<section class="bg-gray-50 min-h-screen py-12" id="Collection">
+>>>>>>> 52088ac0f900526e495ae833b6c62ce746836332
     <div class="container mx-auto">
         <div class="left-[100px] mb-12">
             <h2 class="text-4xl font-semibold">Collection</h2>
@@ -138,6 +142,7 @@
 </section>
 
 <section id="History" class="py-16 bg-gray-100">
+<<<<<<< HEAD
         <div class="container mx-auto px-4">
             <h1 class="text-4xl font-bold text-center mb-8">History Museum Nasional Indonesia</h1>
             <div class="grid md:grid-cols-2 gap-8">
@@ -176,4 +181,10 @@
         </body>
         
 
+=======
+    <div class="container mx-auto px-4">
+        <h1 class="text-4xl font-bold text-center mb-8">History Museum Nasional Indonesia</h1>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div>
+>>>>>>> 52088ac0f900526e495ae833b6c62ce746836332
                
