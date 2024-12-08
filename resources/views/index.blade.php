@@ -34,7 +34,7 @@
 
 <section id="Layanan">
     <div class="left-[100px]">
-        <p class="text-xl">Temporarily closed, more information on Instagram: 
+        <p class="text-xl">Temporarily closed, more information on Instagram:
             <a href="https://www.instagram.com/museumnasionalindonesia/" class="text-blue-500 hover:underline">@museumnasionalindonesia</a>
         </p>
     </div>
@@ -84,11 +84,7 @@
     </div>
 </div>
 
-<<<<<<< HEAD
 <section class="bg-gray-50 min-h-screen top-[1000px]" id="Collection">
-=======
-<section class="bg-gray-50 min-h-screen py-12" id="Collection">
->>>>>>> 52088ac0f900526e495ae833b6c62ce746836332
     <div class="container mx-auto">
         <div class="left-[100px] mb-12">
             <h2 class="text-4xl font-semibold">Collection</h2>
@@ -96,53 +92,26 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
         </div>
-
-        <div class="flex space-x-8 mb-12">
-            <a href="#artefak" class="bg-gray-800 text-white py-2 px-6 rounded-lg hover:bg-blue-600">Artefak</a>
-            <a href="#seni" class="bg-gray-800 text-white py-2 px-6 rounded-lg hover:bg-blue-600">Seni</a>
-            <a href="#pusaka" class="bg-gray-800 text-white py-2 px-6 rounded-lg hover:bg-blue-600">Pusaka</a>
-            <a href="#sejarah" class="bg-gray-800 text-white py-2 px-6 rounded-lg hover:bg-blue-600">Sejarah</a>
-        </div>
-
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            @foreach ($koleksis as $koleksi)
             <div id="artefak" class="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
-                <img src="/Assets/koleksi.png" alt="Sounde Strait" class="w-full h-64 object-cover" />
+                <img src="{{ asset('storage/' . $koleksi->picture) }}" alt="Sounde Strait" class="w-full h-64 object-cover" />
                 <div class="p-6">
-                    <h3 class="text-2xl font-semibold">Sounde Strait</h3>
-                    <p class="text-sm text-gray-500 mt-2">Ujang Mulyadi - Oktober 25, 2022</p>
+                    <h3 class="text-2xl font-semibold">{{ $koleksi->title }}</h3>
+                    <p class="text-sm text-gray-500 mt-2">{{ $koleksi->content }}</p>
                     <a href="/koleksi" class="mt-4 bg-black text-white text-sm py-1 px-4 rounded hover:bg-gray-800 inline-block text-center">
                         Koleksi
                     </a>
                 </div>
-            </div>
 
-            <div id="seni" class="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
-                <img src="/Assets/koleksi.png" alt="Sounde Strait" class="w-full h-64 object-cover" />
-                <div class="p-6">
-                    <h3 class="text-2xl font-semibold">Sounde Strait</h3>
-                    <p class="text-sm text-gray-500 mt-2">Ujang Mulyadi - Oktober 25, 2022</p>
-                    <a href="/koleksi" class="mt-4 bg-black text-white text-sm py-1 px-4 rounded hover:bg-gray-800 inline-block text-center">
-                        Koleksi
-                    </a>
-                </div>
             </div>
-
-            <div id="pusaka" class="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
-                <img src="/Assets/koleksi.png" alt="Sounde Strait" class="w-full h-64 object-cover" />
-                <div class="p-6">
-                    <h3 class="text-2xl font-semibold">Sounde Strait</h3>
-                    <p class="text-sm text-gray-500 mt-2">Ujang Mulyadi - Oktober 25, 2022</p>
-                    <a href="/koleksi" class="mt-4 bg-black text-white text-sm py-1 px-4 rounded hover:bg-gray-800 inline-block text-center">
-                        Koleksi
-                    </a>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
 
+
 <section id="History" class="py-16 bg-gray-100">
-<<<<<<< HEAD
         <div class="container mx-auto px-4">
             <h1 class="text-4xl font-bold text-center mb-8">History Museum Nasional Indonesia</h1>
             <div class="grid md:grid-cols-2 gap-8">
@@ -179,12 +148,6 @@
     </footer>
         </div>
         </body>
-        
 
-=======
-    <div class="container mx-auto px-4">
-        <h1 class="text-4xl font-bold text-center mb-8">History Museum Nasional Indonesia</h1>
-        <div class="grid md:grid-cols-2 gap-8">
-            <div>
->>>>>>> 52088ac0f900526e495ae833b6c62ce746836332
-               
+
+

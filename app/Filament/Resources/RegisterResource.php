@@ -27,15 +27,15 @@ class RegisterResource extends Resource
                 ->label('Email')
                 ->email()
                 ->required()
-                ->unique('users', 'email'), // Validasi agar email unik di tabel 'users'
+                ->unique('users', 'email'),
             Forms\Components\TextInput::make('password')
                 ->label('Password')
-                ->password() // Mengatur agar field ini sebagai password input (password field)
+                ->password()
                 ->required()
-                ->minLength(8) // Minimum 8 karakter
-                ->maxLength(255) // Maksimum 255 karakter (sesuai dengan panjang maksimal untuk kolom di database)
-                ->regex('/[a-zA-Z]/') // Harus mengandung huruf
-                ->regex('/[0-9]/') // Harus mengandung angka
+                ->minLength(8)
+                ->maxLength(255)
+                ->regex('/[a-zA-Z]/')
+                ->regex('/[0-9]/')
                 ->label('Password'),
 
             ]);
@@ -45,13 +45,8 @@ class RegisterResource extends Resource
     {
         return $table
             ->columns([
-<<<<<<< HEAD
                 Tables\Columns\TextColumn::make('email')->searchable()->sortable(),
                 Tables\Columns\TextColumn::make('password')->searchable()->sortable()
-=======
-                Tables\Columns\TextColumn::make('email')->label('email'),
-                Tables\Columns\TextColumn::make('password'),
->>>>>>> 52088ac0f900526e495ae833b6c62ce746836332
             ])
             ->filters([
                 //

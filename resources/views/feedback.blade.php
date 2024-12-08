@@ -19,45 +19,50 @@
     <div class="top-[100px]">
     <div class="max-w-3xl mb-20 mx-auto my-5 p-500 bg-white rounded-lg shadow-md">
         <h1 class="text-4xl font-semibold text-center mb-20">Feedback</h1>
-    
-        <form action="" method="post">
-            <table class="w-full" "top-[100px]"">
-                <tr>
-                    <td class="py-2">Nama</td>
-                    <td><input type="text" name="nama_feedback" class="w-full p-2 top-200 border border-gray-300 rounded-md"></td>
-                </tr>
-                <tr>
-                    <td class="py-2">Email</td>
-                    <td><input type="text" name="email_feedback" class="w-full p-2 border border-gray-300 rounded-md"></td>
-                </tr>
-                <tr>
-                    <td class="py-2">Ulasan</td>
-                    <td><input type="text" name="ulasan_feedback" class="w-full p-2 border border-gray-300 rounded-md"></td>
-                </tr>
-                <tr>
-                    <td class="py-2">Saran/Pesan</td>
-                    <td><input type="text" name="saran_feedback" class="w-full p-2 border border-gray-300 rounded-md"></td>
-                </tr>
-                <td>Rating</td>
-                    <td>
-                        <div class="rating">
-                            <input type="radio" id="star5" name="bintang_feedback" value="5"><label for="star5" title="5 star"></label>
-                            <input type="radio" id="star4" name="bintang_feedback" value="4"><label for="star4" title="4 stars"></label>
-                            <input type="radio" id="star3" name="bintang_feedback" value="3"><label for="star3" title="3 stars"></label>
-                            <input type="radio" id="star2" name="bintang_feedback" value="2"><label for="star2" title="2 stars"></label>
-                            <input type="radio" id="star1" name="bintang_feedback" value="1"><label for="star1" title="1 stars"></label>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                <tr>
-                    <td></td>
-                    <td><input type="submit" value="Simpan" name="proses" class="w-full p-2 bg-gray-800 text-white rounded-md cursor-pointer hover:bg-green-500 font-semibold text-lg"></td>
-                </tr>
-            </table>
-        </form>
+        <form action="{{ route('feedback.store') }}" method="post">
+    @csrf
+    <table class="w-full">
+        <tr>
+            <td class="py-2">Nama</td>
+            <td><input type="text" name="nama_feedback" class="w-full p-2 border border-gray-300 rounded-md"></td>
+        </tr>
+        <tr>
+            <td class="py-2">Email</td>
+            <td><input type="text" name="email_feedback" class="w-full p-2 border border-gray-300 rounded-md"></td>
+        </tr>
+        <tr>
+            <td class="py-2">Ulasan</td>
+            <td><input type="text" name="ulasan_feedback" class="w-full p-2 border border-gray-300 rounded-md"></td>
+        </tr>
+        <tr>
+            <td class="py-2">Saran/Pesan</td>
+            <td><input type="text" name="saran_feedback" class="w-full p-2 border border-gray-300 rounded-md"></td>
+        </tr>
+        <tr>
+            <td>Rating</td>
+            <td>
+                <div class="rating">
+                    <input type="radio" id="star5" name="bintang_feedback" value="5"><label for="star5" title="5 star"></label>
+                    <input type="radio" id="star4" name="bintang_feedback" value="4"><label for="star4" title="4 stars"></label>
+                    <input type="radio" id="star3" name="bintang_feedback" value="3"><label for="star3" title="3 stars"></label>
+                    <input type="radio" id="star2" name="bintang_feedback" value="2"><label for="star2" title ="2 stars"></label>
+                    <input type="radio" id="star1" name="bintang_feedback" value="1"><label for="star1" title="1 star"></label>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Simpan" name="proses" class="w-full p-2 bg-gray-800 text-white rounded-md cursor-pointer hover:bg-green-500 font-semibold text-lg"></td>
+        </tr>
+    </table>
+</form>
     </div>
 </div>
+@if(session('success'))
+    <div class="bg-green-500 text-white p-4 rounded">
+        {{ session('success') }}
+    </div>
+@endif
 
     <footer class="bg-gray-800 py-4 text-white py-6 mt-10">
     <div class="flex justify-between items-center mx-16">

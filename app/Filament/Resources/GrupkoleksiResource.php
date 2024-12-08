@@ -42,7 +42,6 @@ class GrupkoleksiResource extends Resource
     {
         return $table
             ->columns([
-<<<<<<< HEAD
                 Tables\Columns\TextColumn::make('nama')->searchable()->sortable(),
                 Tables\Columns\TextColumn::make('grup')->searchable()->sortable()
             ])
@@ -54,13 +53,6 @@ class GrupkoleksiResource extends Resource
                     'pusaka' => 'pusaka',
                     'sejarah' => 'sejarah',
                 ]),
-=======
-                Tables\Columns\TextColumn::make('nama')->label('koleksi'),
-                Tables\Columns\TextColumn::make('grup')
-            ])
-            ->filters([
-                //
->>>>>>> 52088ac0f900526e495ae833b6c62ce746836332
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
