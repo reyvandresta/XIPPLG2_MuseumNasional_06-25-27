@@ -30,11 +30,11 @@
     <iframe src="https://www.google.com/maps/embed?pb=!4v1714441629904!6m8!1m7!1shu28aHtNx76Up9e3NdeDAA!2m2!1d-6.176146431305235!2d106.8224409139945!3f268.80549948132415!4f1.591130038434457!5f0.7820865974627469" width="1260" height="700" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 
-<section class="bg-gray-50 min-h-screen" id="berita tentang museum">
+<section class="bg-gray-50 min-h-screen" id="video tentang museum">
     <div class="container mx-auto px-4 py-8">
         <div class="mb-12">
             <h2 class="text-4xl font-semibold flex items-center">
-                Berita tentang museum
+                video tentang museum
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 ml-2">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>

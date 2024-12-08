@@ -54,7 +54,7 @@
                     <h2 class="text-2xl font-bold">Kunjungan Museum</h2>
                     <p class="text-lg mt-2">Menjelajahi Museum Nasional Indonesia</p>
                 </div>
-                <a href="/kunjungan">
+                <a href="/berita">
                     <img src="/Assets/home4.png" class="w-[50px] hover:scale-105 transition-transform">
                 </a>
             </div>
@@ -98,7 +98,7 @@
                 <img src="{{ asset('storage/' . $koleksi->picture) }}" alt="Sounde Strait" class="w-full h-64 object-cover" />
                 <div class="p-6">
                     <h3 class="text-2xl font-semibold">{{ $koleksi->title }}</h3>
-                    <p class="text-sm text-gray-500 mt-2">{{ $koleksi->content }}</p>
+                    <p class="text-sm text-gray-500 mt-2">Di Tulis Oleh {{ $koleksi->content }}</p>
                     <a href="/koleksi" class="mt-4 bg-black text-white text-sm py-1 px-4 rounded hover:bg-gray-800 inline-block text-center">
                         Koleksi
                     </a>

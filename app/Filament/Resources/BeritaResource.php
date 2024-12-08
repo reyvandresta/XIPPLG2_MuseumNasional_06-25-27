@@ -2,21 +2,25 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\KoleksiResource\Pages;
-use App\Models\Koleksi;
+use App\Filament\Resources\BeritaResource\Pages;
+use App\Filament\Resources\BeritaResource\RelationManagers;
+use App\Models\Berita;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class KoleksiResource extends Resource
+class BeritaResource extends Resource
 {
-    protected static ?string $model = Koleksi::class;
+    protected static ?string $model = Berita::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
-    public static function form(Forms\Form $form): Forms\Form
+    public static function form(Form $form): Form
     {
         return $form
             ->schema([
@@ -27,13 +31,9 @@ class KoleksiResource extends Resource
                     ->label('Upload Gambar')
                     ->image()
                     ->required(),
-                Forms\Components\Select::make('content')
-                ->options([
-                    'ujang mulyadi' => 'ujang mulyadi',
-                    'adil rahmat' => 'adil rahmat'
-                ])
-                ->label('penulis')
-                ->required(),
+                Forms\Components\Textarea::make('content')
+                    ->label('deskripsi')
+                    ->required(),
             ]);
     }
 
@@ -45,7 +45,9 @@ class KoleksiResource extends Resource
                 Tables\Columns\TextColumn::make('content')->searchable()->sortable(),
                 Tables\Columns\ImageColumn::make('picture')->searchable()->sortable()
             ])
-            ->filters([])
+            ->filters([
+                //
+            ])
             ->actions([
                 Tables\Actions\EditAction::make(),
             ])
@@ -58,15 +60,17 @@ class KoleksiResource extends Resource
 
     public static function getRelations(): array
     {
-        return [];
+        return [
+            //
+        ];
     }
 
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListKoleksis::route('/'),
-            'create' => Pages\CreateKoleksi::route('/create'),
-            'edit' => Pages\EditKoleksi::route('/{record}/edit'),
+            'index' => Pages\ListBeritas::route('/'),
+            'create' => Pages\CreateBerita::route('/create'),
+            'edit' => Pages\EditBerita::route('/{record}/edit'),
         ];
     }
 }
